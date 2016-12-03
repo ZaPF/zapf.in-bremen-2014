@@ -1,0 +1,47 @@
+\documentclass[a5paper,10pt, openany]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[a5paper,left=15mm,right=15mm, top=20mm,bottom=10mm]{geometry}
+\usepackage{booktabs}	% Tabellenpaket
+\usepackage{multirow}	% Erlaubt Zusammenfassen von mehreren Spalten zu einer in einer Tabelle
+\usepackage{watermark}
+\usepackage[cmyk]{xcolor} 
+\usepackage{graphicx} 
+%\usepackage{scrpage2}
+\usepackage{xifthen}
+\usepackage{subfig} 
+\definecolor{urlred}{HTML}{660000}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,	
+  linkcolor=black,	% Farbe der internen Links (u.a. Table of Contents)
+  urlcolor=urlred}	% Farbe der url-links
+
+\parindent 0ex 		% Absatzeinrücken verhindern
+\parskip 1.5ex 		% Absätze durch Lücke trennen
+
+\usepackage{titlesec}	% Abstand nach Überschriften neu definieren
+\titlespacing{\subsection}{0ex}{2ex}{-1ex}
+\titlespacing{\subsubsection}{0ex}{2ex}{-1ex}
+
+\renewcommand{\thesubsection}{\hspace{-0.5em}}		% Neudefinition der Subsection-Überschrift
+\renewcommand{\thesubsubsection}{\hspace{0.5em}}	% Neudefinition
+							% der Subsubsection-Überschrift 
+%\setlength{\textheight}{23cm}
+%\setlength{\topmargin}{-1.2cm}
+\setcounter{tocdepth}{1}
+
+%Was tun die 4 Sachen oder können die weg?
+% \renewcommand{\textfraction}{0.05}
+% \renewcommand{\topfraction}{0.95}
+% \renewcommand{\bottomfraction}{0.95}
+% \renewcommand{\floatpagefraction}{0.75}
+\makeatletter
+\let\ps@plain\ps@empty
+\makeatother
+
+\begin{document}
+    \input{Beispiel_AK.tex}
+\end{document}
